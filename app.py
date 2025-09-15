@@ -12,7 +12,10 @@ with open('fittings_data.json') as f:
 def check_fitting_status(fitting):
     alerts = []
     supply_date = datetime.strptime(fitting['supply_date'], "%Y-%m-%d")
-    warranty_expiry = supply_date + timedelta(months=fitting['warranty_period_months'])
+    from dateutil.relativedelta import relativedelta
+
+warranty_expiry = supply_date + relativedelta(months=fitting['warranty_period_months'])
+
 
     if datetime.today() > warranty_expiry:
         alerts.append("⚠️ Warranty Expired")
@@ -53,3 +56,4 @@ def scan():
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
+
