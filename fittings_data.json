@@ -1,0 +1,23 @@
+{
+    "FCLIP-123456": {
+        "vendor": "Tata Steel",
+        "supply_date": "2024-12-01",
+        "warranty_period_months": 24,
+        "inspection_dates": ["2025-01-01", "2025-06-01"],
+        "failure_count": 2
+    },
+    "FPAD-654321": {
+        "vendor": "Pandrol Ltd.",
+        "supply_date": "2023-10-15",
+        "warranty_period_months": 18,
+        "inspection_dates": ["2024-04-15"],
+        "failure_count": 0
+    },
+    "FLINER-987654": {
+        "vendor": "Jekay Solutions",
+        "supply_date": "2024-01-10",
+        "warranty_period_months": 12,
+        "inspection_dates": ["2024-07-10"],
+        "failure_count": 1
+    }
+}
